@@ -1,3 +1,98 @@
+console.clear();
+
+// Trend technology
+
+//Trend technology 1
+// def solution(X, Y, A):
+//     N = len(A)
+//     result = -1
+//     nX = 0
+//     nY = 0
+//     for i in range(N):
+//         if A[i] == X:
+//             nX += 1
+//         elif A[i] == Y:
+//             nY += 1
+//         if nX and nX == nY:
+//             result = i
+//     return result
+
+//2
+//
+function TrendSolution2() {
+    
+   var person = $("#type_person").is(":checked");
+   var company = $("#type_company").is(":checked");
+   var firstname = $("#first_name").val();
+   var lastname = $("#last_name").val();
+   var email = $("#email").val();
+   var companyname = $("#company_name").val();
+   var phone = $("#phone").val();
+   var result = true
+  
+  
+   if(person){
+       if (firstname.match(/[a-zA-Z/]+/)== null){
+           result = false; 
+       }
+       if (lastname.match(/[a-zA-Z/]+/)== null){
+           result = false; 
+       }
+       
+      if (email.match(/^[a-zAZ.]{1,64}@[a-zA-Z.]{1,64}$/)== null){
+           result = false; 
+       }
+       
+       
+   }else if (company){
+      if (companyname.match(/[/a-zA-Z]+/)== null){
+           result = false; 
+       }
+     if (phone.match(/^[\d]{3}-^[\d]{3}-^[\d]{3}/)== null){
+           result = false; 
+       }
+       
+       
+   }else{
+       return false;
+   }
+  
+    return result;
+ }
+
+//   console.log(person)
+//   console.log( company )
+//   console.log(firstname)
+//   console.log(lastname )
+//   console.log(email) 
+//   console.log(companyname)
+//   console.log(phone )
+
+
+//3
+function TrendSolutio3() {
+    
+    var alllistcount = $("ul,ol").length;
+    var parentscount = 0;
+    var parentsarray = [];
+    var result;
+    
+    if (alllistcount){
+        for(i=0 ; i<alllistcount;i++){
+          parentscount = $("ul,ol").eq(i).parents("ul,ol").length + 1;
+          parentsarray.push(parentscount)
+        }
+        result = Math.max.apply(null ,parentsarray)
+    }else{
+        result = 0;
+    }
+    
+    return result;
+}
+
+
+
+
 // Lesson 1 - Iterations
 function BinaryGap(N) {
     // write your code in JavaScript (Node.js 8.9.4)
@@ -154,6 +249,7 @@ function FrogRiverOne(X, A) {
 
 // Leetcode
 
+//[1] Two Sum (Array)
 var twoSum = function(nums, target) {
 
     for(var i = 0 ; i < nums.length ; i++){
@@ -168,6 +264,20 @@ var twoSum = function(nums, target) {
     } 
 };
 
+//[2]Add Two Numbers (LinkedList)
+//題目給的listnode
+// class ListNode {
+//   constructor(data, next = null) {
+//     this.data = data
+//     this.next = next
+//   }
+// }
+// function ListNode(val, next) {
+//     this.val = (val===undefined ? 0 : val)
+//     this.next = (next===undefined ? null : next)
+// }
+
+// [7] Reverse Integer (Number)
 var addTwoNumbers = function(l1, l2) {
     var list3 = new ListNode(0); 
     var result = list3; // 使用一個新ListNode來儲存相加的結果
@@ -206,6 +316,7 @@ var ReverseInteger = function(x) {
   let isNegative = x < 0 ? -1 : 1
 //  轉正整數，轉字串的方法 +""
   let str = Math.abs(x) +""
+  //拆開字串、反轉、接合
 //  轉數字的方法 -0
   let strArr = str.split("").reverse().join("")-0
   let returnInt = strArr = strArr * isNegative
@@ -213,9 +324,125 @@ var ReverseInteger = function(x) {
   return returnInt 
 };
 
+//[9]Palindrome Number (Number)
+var isPalindrome = function(x) {
+    //如果是負數直接 flase
+   if (x < 0 ) return false;
+    var raw = x;
+    x = Math.abs(x);
+    var p = 0;
+    while (x) {
+        p = p * 10 + x % 10;
+        x = Math.floor(x / 10);
+    }
+    // console.log(x, p);
+    return raw === p;
 
+};
+
+// [13] Roman to Integer
+var romanToInt = function(s) {
+    //如果沒有字串回傳0
+    if (!s) return 0;
+
+    var map = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    };
+    //map s字串最右邊
+    var sum = map[s[s.length - 1]];
+    for (var i = s.length - 2; i >= 0; i--) {
+        if (map[s[i]] < map[s[i + 1]]) {
+            sum -= map[s[i]];
+        }
+        else {
+            sum += map[s[i]];
+        }
+    }
+    return sum;
+    
+};
+
+
+
+
+
+// [344] Reverse String (String)
 var ReverseString = function(s) {
     arr = s.reverse()
     return arr
 }
 
+
+// [367] Valid Perfect Square (number)
+
+//檢查從1到num，有沒有平方正好等於num的數
+var isPerfectSquare = function(num) {
+  for(var i = 1; i <= num / i; i++) {
+    if(i * i === num) return true;
+  }
+  return false;
+};
+
+
+//371 Sum of Two Integers （other）
+
+//https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators
+var getSum = function(a, b) {
+  
+  const sum = a ^ b; // XOR derives the sum bits, without carry
+  const carry = (a & b) << 1; // AND derives the carry bits
+
+  if (!carry) {
+    return sum;
+  }
+
+  return getSum(sum, carry);
+    
+    
+    
+}
+
+
+
+function getSum2(a, b) {
+    var s1, s2;
+    
+    s1 = parseNumberToStringWithPN(num1);
+    s2 = parseNumberToStringWithPN(num2);
+
+    // Change number to the string whose length is same as the value. 'p' means positive and 'n' means negative.
+    // EX. 2 => pp
+    // EX. -4 => nnnn
+    function parseNumberToStringWithPN(num) {
+        if(num >= 0) {
+            return 'p'.repeat(num);
+        } else {
+            return 'n'.repeat(num*-1);
+        }
+    }
+
+    // If one number is positive and another is negative, using substr() to both strings until anyone's length to be 0
+    if((num1 < 0 || num2 < 0) && !(num1 < 0 && num2 < 0)) {
+        do {
+            s1 = s1.substr(1);
+            s2 = s2.substr(1);
+        } while(s1.length > 0 && s2.length > 0);
+    }
+    
+    // Use concat() for adding two variables
+    var result = s1.concat(s2);
+    
+    if(result.indexOf('n') > -1) { 
+        // Negative result
+        return result.length * -1;
+    } else { 
+        // Positive result
+        return result.length;
+    }
+}
