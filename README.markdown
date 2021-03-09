@@ -2,6 +2,9 @@
 
 ## Codility Solutions by JavaScript
 
+### Rakuten Japan 
+1. [Rakuten Japan Calculate the length of the shortest array that is required to form a Binarian of an input array(php)](https://github.com/tcssh611503/codility-and-leetcode-javascript-solutions/blob/main/Codility-Rakuten-Japan.php)
+
 ### Trend technology
 1. [TrendSolution1 error correction question(python)](https://github.com/tcssh611503/codility-and-leetcode-javascript-solutions/blob/main/Codility-TrendTechnology-01.js)
 1. [TrendSolution2 Form Validation](https://github.com/tcssh611503/codility-and-leetcode-javascript-solutions/blob/main/Codility-TrendTechnology-02.js)
