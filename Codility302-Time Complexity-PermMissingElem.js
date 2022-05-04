@@ -25,17 +25,16 @@
 // each element of array A is an integer within the range [1..(N + 1)].
 
 function solution(A) {
-    // write your code in JavaScript (Node.js 8.9.4)
-     if (A.length === 0) return 1
-     // find max number
-     let Along = A.length + 1
-     // total value use trapezoid formula
-     let total = ( (1 + Along)*Along/2)
-     // total value - all A[i] 
-     for ( i = 0 ; i < A.length ; i++ )
-     {
-         total = total - A [i]
-     }
-   return total
- 
+  // write your code in JavaScript (Node.js 8.9.4)
+  if (A.length === 0) return 1
+  // find max number
+  let Along = A.length + 1
+  // total value use trapezoid formula
+  let total = ( (1 + Along)*Along/2)
+  // total value - all A[i] 
+  for ( i = 0 ; i < A.length ; i++ )
+  {
+      total = total - A [i]
+  }
+  return total
 }

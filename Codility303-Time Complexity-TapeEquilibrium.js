@@ -41,20 +41,16 @@
 // N is an integer within the range [2..100,000];
 // each element of array A is an integer within the range [−1,000..1,000].
 function solution(A) {
-    // write your code in JavaScript (Node.js 8.9.4)
-    let sum1 = 0
-    let sum2 = A.reduce(( a , b ) => ( a + b)   )
-    
-    let mindiff = Infinity
-    
-    for (i = 0 ; i < (A.length-1) ; i++){
-      sum1 += A[i]
-      sum2 -= A[i]
-      let diff = sum2 - sum1
-      mindiff = Math.min(mindiff, Math.abs(diff))
-  
-    }
-    return mindiff
-  
+  // write your code in JavaScript (Node.js 8.9.4)
+  let sum1 = 0
+  let sum2 = A.reduce(( a , b ) => ( a + b))
+  let mindiff = Infinity
+  for (i = 0; i < (A.length-1); i++){
+    sum1 += A[i]
+    sum2 -= A[i]
+    let diff = sum2 - sum1
+    mindiff = Math.min(mindiff, Math.abs(diff))
+  }
+  return mindiff
 }
 

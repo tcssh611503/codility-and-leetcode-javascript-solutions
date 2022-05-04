@@ -11,19 +11,19 @@
 // Copyright 2009–2021 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
 
 function solution(N) {
-    // write your code in JavaScript (Node.js 8.9.4)
-    // decimal to binary 
-    const number = N.toString(2)
-    //  split array 's by 1'
-    return number.split("1")
-    // calculate array's length by reduce
-                 .reduce((answer,value,index,array)=>{
-                     if (value 
-                        && value.length>answer
-                        && array[index -1] !== undefined 
-                        && array[index +1] !== undefined
-                        ) return value.length
-                     return answer
-                 }
-                 ,0)
+  // write your code in JavaScript (Node.js 8.9.4)
+  // decimal to binary 
+  const number = N.toString(2)
+  //  split array 's by 1'
+  return number.split("1")
+  // calculate array's length by reduce
+                .reduce((answer,value,index,array)=>{
+                  if (value 
+                    && value.length>answer
+                    && array[index -1] !== undefined 
+                    && array[index +1] !== undefined
+                    ) return value.length
+                  return answer
+                }
+                ,0)
 }

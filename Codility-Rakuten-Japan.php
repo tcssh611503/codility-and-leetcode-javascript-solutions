@@ -45,30 +45,31 @@
 
 
 function solution($A) {
-    // 1.Calculate Binarian
-    $binA = 0; 
-    
-    // Calculate the Binarian value
-    for($i=0 ; $i<count($A) ; $i++){
-     $binA   = $binA + pow(2, $A[$i]);
+// 1.Calculate Binarian
+$binA = 0; 
+
+// Calculate the Binarian value
+for ($i=0; $i<count($A); $i++) {
+  $binA   = $binA + pow(2, $A[$i]);
+}
+
+//2.Calculate the length of the shortest array
+$countArray = 0;
+$lenA = count($A);
+
+for ($i=$lenA-1 ; $i>=0 ; $i--) {
+    $pow = pow(2, $i);
+
+    if($pow == $binA ){
+      $countArray ++;
+      break;
+    } else if ($pow < $binA) {
+      $countArray ++;
+      $binA =  $binA - $pow;
     }
+}
 
-    //2.Calculate the length of the shortest array
-    $countArray = 0;
-    $lenA = count($A);
-
-    for ($i=$lenA-1 ; $i>=0 ; $i--){
-        $pow = pow(2, $i);
-
-        if($pow == $binA ){
-         $countArray ++;
-         break;
-        }else if ($pow < $binA ){
-           $countArray ++;
-           $binA =  $binA - $pow;
-        }
-    }
-   return $countArray;
+return $countArray;
 }
 
 ?>

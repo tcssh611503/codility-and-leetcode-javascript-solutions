@@ -26,18 +26,17 @@ Output: [1,3,3]
  */
 var decompressRLElist = function(nums) {
     
-  let result = []
-  let freq = 0; 
-  let len = nums.length
-  for(var i = 0; i< len; i=i+2){ 
-  while(freq < nums[i]){ // push value correct number of times
-      result.push(nums[i+1]);
-      freq++;
+let result = []
+let freq = 0; 
+let len = nums.length
+for (var i = 0; i< len; i = i + 2) { 
+  while(freq < nums[i]) { // push value correct number of times
+    result.push(nums[i+1]);
+    freq++;
   }
   freq = 0; // clear frequency every iteration
-  }
-return result
+}
 
-  
+return result
 };
 

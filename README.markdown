@@ -30,11 +30,11 @@ Lesson 4 - Counting Elements
 
 [[1] Two Sum](https://github.com/tcssh611503/codility-and-leetcode-javascript-solutions/blob/main/Leetcode0001-Two-Sum.js)
 
-[[2]Add Two Numbers](https://github.com/tcssh611503/codility-and-leetcode-javascript-solutions/blob/main/Leetcode0002-Add%20Two%20Numbers.js)
+[[2] Add Two Numbers](https://github.com/tcssh611503/codility-and-leetcode-javascript-solutions/blob/main/Leetcode0002-Add%20Two%20Numbers.js)
 
 [[7] Reverse Integer](https://github.com/tcssh611503/codility-and-leetcode-javascript-solutions/blob/main/Leetcode0007-Reverse%20Integer.js)
 
-[[9]Palindrome Number](https://github.com/tcssh611503/codility-and-leetcode-javascript-solutions/blob/main/Leetcode0009-Palindrome%20Number.js)
+[[9] Palindrome Number](https://github.com/tcssh611503/codility-and-leetcode-javascript-solutions/blob/main/Leetcode0009-Palindrome%20Number.js)
 
 [[13] Roman to Integer](https://github.com/tcssh611503/codility-and-leetcode-javascript-solutions/blob/main/Leetcode0013-Roman%20to%20Integer.js)
 

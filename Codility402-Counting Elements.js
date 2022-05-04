@@ -57,7 +57,6 @@ function solution(A) {
     sum2 -= A[i]
     let diff = sum2 - sum1
     mindiff = Math.min(mindiff, Math.abs(diff))
-
   }
   return mindiff
 

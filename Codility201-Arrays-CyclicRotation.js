@@ -37,17 +37,17 @@
 // each element of array A is an integer within the range [−1,000..1,000].
 // In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 function solution(A, K) {
-    // write your code in JavaScript (Node.js 8.9.4)
-    let result = []
-    result = A
-    // check []
-    if (!result.length) return result
-    // pop : take last element from array
-    // unshift: add element to the beginning of array 
-    for (i = 0 ; i < K ; i++){
-        result.unshift(result.pop())
-    }
-    
-    return result
+  // write your code in JavaScript (Node.js 8.9.4)
+  let result = []
+  result = A
+  // check []
+  if (!result.length) return result
+  // pop : take last element from array
+  // unshift: add element to the beginning of array 
+  for (i = 0 ; i < K ; i++) {
+    result.unshift(result.pop())
+  }
+  
+  return result
 }
 

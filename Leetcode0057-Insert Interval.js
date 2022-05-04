@@ -43,23 +43,23 @@ var insert = function(intervals, newInterval) {
   var i = 0;
   // 原本區間的最大值大於新區間
   for ( null; i < intervals.length; i++) {
-      if (intervals[i][1] >= newInterval[0]) break;
-      else result.push(intervals[i]);
+    if (intervals[i][1] >= newInterval[0]) break;
+    else result.push(intervals[i]);
   }
   
   // 新區間大於原本區間，新區間的第一個元素取代第一個元素
   if (i < intervals.length && newInterval[0] > intervals[i][0]) {
-      newInterval[0] = intervals[i][0]
+    newInterval[0] = intervals[i][0]
   }
    // 新區間大於原本區間，新區間的最大元素取代第二個元素
   for ( null ; i < intervals.length; i++) {
-      if (newInterval[1] < intervals[i][0]) break;
-      newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
+    if (newInterval[1] < intervals[i][0]) break;
+    newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
   }
   result.push(newInterval);
   
-  for ( null ; i < intervals.length; i++) {
-      result.push(intervals[i]);
+  for (null ; i < intervals.length; i++) {
+    result.push(intervals[i]);
   }
   
   return result;

@@ -23,13 +23,19 @@
  * @return {number}
  */
 var reverse = function(x) {
-    //  三元判斷式 
-      let isNegative = x < 0 ? -1 : 1
-    //  轉正整數，轉字串的方法 +""
-      let str = Math.abs(x) +""
-    //  轉數字的方法 -0
-      let strArr = str.split("").reverse().join("")-0
-      let returnInt = strArr = strArr * isNegative
-      if(returnInt < -2147483648 || returnInt >2147483647)return 0
-      return returnInt 
+  
+  //  三元判斷式，決定正負數
+  let isNegative = x < 0 ? -1 : 1;
+    
+  //  轉正整數，轉字串的方法 +""
+  let str = Math.abs(x) +"";
+    
+  //  轉數字的方法 -0
+  let strArr = str.split("").reverse().join("") - 0
+  let returnInt = strArr = strArr * isNegative;
+  if (returnInt < -2147483648 || returnInt >2147483647) {
+    return 0;
+  } else {
+    return returnInt;
+  }
 };

@@ -26,11 +26,11 @@
 // X ≤ Y.
 
 function solution(X, Y, D) {
-    // write your code in JavaScript (Node.js 8.9.4)
-    if (X == Y) {return 0}
-    else if (D > (Y-X)) { return 1}
-    else { 
-        return Math.ceil((Y-X)/D)
-    }
+  // write your code in JavaScript (Node.js 8.9.4)
+  if (X == Y) {return 0}
+  else if (D > (Y-X)) { return 1}
+  else { 
+    return Math.ceil((Y-X)/D)
+  }
     
 }

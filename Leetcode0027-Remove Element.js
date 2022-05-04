@@ -12,16 +12,14 @@ The order of elements can be changed. It doesn't matter what you leave beyond th
  * @return {number}
  */
 var removeElement = function(nums, val) {
+  var result = 0
+  const max = nums.length
+  for (var i = 0; i < max; i++) {
+    if (nums[i] != val ) {
+      nums[result ++] = nums[i];
+    } 
+  }
 
-    var result = 0
-    const max = nums.length
-    for(var i = 0; i<max ; i++){
-       if(nums[i] != val ){
-          nums[result ++] = nums[i];
-        } 
-    }
-
-        
   return result 
 };
  

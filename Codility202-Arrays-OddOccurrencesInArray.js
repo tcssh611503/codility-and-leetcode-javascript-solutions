@@ -31,21 +31,21 @@
 // all but one of the values in A occur an even number of times.
 
 function solution(A) {
-    // write your code in JavaScript (Node.js 8.9.4)
-     var dict = {} ;
-    for ( var i= 0 ; i< A.length ; i ++){
-        if ( A[i] in dict ){
-            delete dict[A[i]];
-        }else{
-            dict[A[i]] = 1 ;
-        }
+
+  // write your code in JavaScript (Node.js 8.9.4)
+  var dict = {} ;
+  for (var i= 0 ; i< A.length; i ++){
+    if (A[i] in dict) {
+      delete dict[A[i]];
+    } else{
+      dict[A[i]] = 1;
     }
-    // parseInt 轉為數字
-    //   dictOne   Object { 1: 1}
-    //   Object.keys(dictOne)  ["1"]
-    //   parseInt(Object.keys(dictOne)  1
-    //   parseInt(Object.keys(dictOne)[0] 取物件第一個
-    return parseInt(Object.keys(dict)[0])
-    
+  }
+  // parseInt 轉為數字
+  // dictOne   Object { 1: 1}
+  // Object.keys(dictOne)  ["1"]
+  // parseInt(Object.keys(dictOne)  1
+  // parseInt(Object.keys(dictOne)[0] 取物件第一個
+  return parseInt(Object.keys(dict)[0])
 }
 

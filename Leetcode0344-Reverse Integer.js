@@ -21,6 +21,6 @@ You may assume all the characters consist of printable ascii characters.
  * @return {void} Do not return anything, modify s in-place instead.
  */
 var reverseString = function(s) {
-    arr = s.reverse();
-     return arr;
+  arr = s.reverse();
+  return arr;
 };

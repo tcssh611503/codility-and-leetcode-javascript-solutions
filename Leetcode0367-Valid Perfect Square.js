@@ -14,10 +14,11 @@ Output: false
  */
 
 var isPerfectSquare = function(num) {
-    
-    for(var i = 1; i <= num / i; i++) {
-  if(i * i === num) return true;
+for(var i = 1; i <= num / i; i++) {
+  if (i * i === num) {
+    return true;
+  }
 }
+
 return false;
-  
 };

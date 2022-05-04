@@ -9,35 +9,29 @@ function TrendSolution2() {
   var companyname = $("#company_name").val();
   var phone = $("#phone").val();
   var result = true
- 
- 
-  if(person){
-      if (firstname.match(/[a-zA-Z/]+/)== null){
-          result = false; 
-      }
-      if (lastname.match(/[a-zA-Z/]+/)== null){
-          result = false; 
-      }
-      
-     if (email.match(/^[a-zAZ.]{1,64}@[a-zA-Z.]{1,64}$/)== null){
-          result = false; 
-      }
-      
-      
-  }else if (company){
-     if (companyname.match(/[/a-zA-Z]+/)== null){
-          result = false; 
-      }
-    if (phone.match(/^[\d]{3}-^[\d]{3}-^[\d]{3}/)== null){
-          result = false; 
-      }
-      
-      
-  }else{
-      return false;
+  if (person) {
+    if (firstname.match(/[a-zA-Z/]+/)== null){
+        result = false; 
+    }
+    if (lastname.match(/[a-zA-Z/]+/)== null){
+        result = false; 
+    }
+    
+    if (email.match(/^[a-zAZ.]{1,64}@[a-zA-Z.]{1,64}$/)== null) {
+        result = false; 
+    }
+  } else if (company) {
+    if (companyname.match(/[/a-zA-Z]+/) == null) {
+      result = false; 
+    }
+    if (phone.match(/^[\d]{3}-^[\d]{3}-^[\d]{3}/) == null) {
+      result = false; 
+    }
+  } else {
+    return false;
   }
  
-   return result;
+  return result;
 }
 
 //   console.log(person)
